@@ -27,7 +27,7 @@ def movingTheFile(og_path):
 
     newfilePath = os.path.join(newPath, filename)
     print('Copying {} to {}'.format(full_path, newfilePath))
-    # uncomment the next line until sure
+    # uncomment the next line when ready
     # shutil.copy(full_path, newfilePath)
 
 
