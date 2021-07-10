@@ -20,17 +20,16 @@ def movingTheFile(og_path):
     year = datetimeObj.year  # year = 2020
     month = datetimeObj.strftime('%B')  # month = 3
 
-    filename = os.path.basename(full_path)
+    filename = os.path.basename(og_path)
     newPath = 'D:\\sortedtest1\\{}\\{}'.format(year, month)
 
-    Path(newPath).mkdir(parents=True, exist_ok=True)  # windowsPath object
+    Path(newPath).mkdir(parents=True, exist_ok=True)  # makes a directory if it doesn't exist
 
     newfilePath = os.path.join(newPath, filename)
     print('Copying {} to {}'.format(full_path, newfilePath))
-    #shutil.copy(full_path, newfilePath)
+    # uncomment the next line until sure
+    # shutil.copy(full_path, newfilePath)
 
-
-downloadThreads = []
 
 
 for foldername, subfolders, filenames in os.walk('C:\\Users\\ahtav\\Videos\\Fortnite'):
