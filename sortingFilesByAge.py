@@ -21,7 +21,7 @@ def movingTheFile(og_path):
     month = datetimeObj.strftime('%B')  # month = 3
 
     filename = os.path.basename(og_path)
-    newPath = 'D:\\sortedtest1\\{}\\{}'.format(year, month)
+    newPath = 'C:\\name-of-your-new-folder\\{}\\{}'.format(year, month)
 
     Path(newPath).mkdir(parents=True, exist_ok=True)  # makes a directory if it doesn't exist
 
@@ -32,7 +32,7 @@ def movingTheFile(og_path):
 
 
 
-for foldername, subfolders, filenames in os.walk('C:\\Users\\ahtav\\Videos\\Fortnite'):
+for foldername, subfolders, filenames in os.walk('C:\\file\\path\\to\\folder\\you\\want\\to\\copy'):
     for filename in filenames:
         full_path = os.path.join(foldername, filename)
         movingTheFile(full_path)
